@@ -28,4 +28,3 @@ Chronological record of design iterations, technical discoveries, and strategic 
 ## Epoch 4: Edge Case Isolation
 * **Implemented:** Authorization expiration daemons and partial-settlement release routines.
 * **Discovery:** Identified an unhandled race condition where a late-arriving clearing file settles an authorization *after* the scheme TTL daemon triggered an auto-expiration.
-* **Action:** Isolated this behavior into an explicit annotated failing test (`tests/edge_cases_test.py`) to highlight the operational boundary.
